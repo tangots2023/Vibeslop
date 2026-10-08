@@ -1,0 +1,401 @@
+```css
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+#desktop {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #1e3a8a,
+            #312e81
+        );
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   DESKTOP ICONS
+========================= */
+
+#desktopIcons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.desktop-icon {
+    width: 80px;
+
+    background: transparent;
+    border: none;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 8px;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+}
+
+.desktop-icon:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.desktop-icon .icon {
+    font-size: 35px;
+}
+
+.desktop-icon span:last-child {
+    font-size: 13px;
+}
+
+
+/* =========================
+   WINDOWS
+========================= */
+
+.window {
+    position: absolute;
+
+    width: 600px;
+    height: 400px;
+
+    left: 50%;
+    top: 45%;
+
+    transform: translate(-50%, -50%);
+
+    background: #f5f5f5;
+
+    border: 1px solid #111;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5);
+
+    overflow: hidden;
+
+    z-index: 10;
+}
+
+.window-header {
+    height: 40px;
+
+    background: #202020;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 12px;
+
+    user-select: none;
+
+    cursor: grab;
+}
+
+.window-header:active {
+    cursor: grabbing;
+}
+
+.window-title {
+    font-size: 14px;
+}
+
+.window-controls {
+    display: flex;
+    height: 100%;
+}
+
+.window-button {
+    width: 42px;
+    height: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.window-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.window-button.close:hover {
+    background: #d32f2f;
+}
+
+
+/* =========================
+   WINDOW CONTENT
+========================= */
+
+.window-content {
+    height: calc(100% - 40px);
+
+    padding: 20px;
+
+    color: #111;
+
+    overflow: auto;
+}
+
+.window-content h2 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   NOTEPAD
+========================= */
+
+.notepad-content {
+    padding: 0;
+}
+
+#notepadText {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    resize: none;
+
+    padding: 15px;
+
+    font-family: Consolas, monospace;
+    font-size: 15px;
+}
+
+
+/* =========================
+   TASKBAR
+========================= */
+
+#taskbar {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 52px;
+
+    background: rgba(15, 15, 15, 0.92);
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+
+/* =========================
+   START BUTTON
+========================= */
+
+#startButton {
+    height: 100%;
+
+    padding: 0 20px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+#startButton:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================
+   TASKBAR APPS
+========================= */
+
+#taskbarApps {
+    display: flex;
+
+    height: 100%;
+
+    align-items: center;
+
+    gap: 3px;
+}
+
+.taskbar-app {
+    height: 40px;
+
+    min-width: 120px;
+
+    border: none;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.taskbar-app:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   SYSTEM TRAY
+========================= */
+
+#systemTray {
+    margin-left: auto;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 0 15px;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   START MENU
+========================= */
+
+#startMenu {
+    position: absolute;
+
+    left: 10px;
+    bottom: 60px;
+
+    width: 330px;
+    height: 450px;
+
+    background: rgba(20, 20, 20, 0.96);
+
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5);
+
+    z-index: 2000;
+
+    overflow: hidden;
+}
+
+.start-header {
+    padding: 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.start-header h2 {
+    font-size: 22px;
+}
+
+.start-apps {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+}
+
+.start-apps button {
+    padding: 15px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    text-align: left;
+
+    font-size: 15px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.start-apps button:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================
+   UTILITY
+========================= */
+
+.hidden {
+    display: none !important;
+}
+```
