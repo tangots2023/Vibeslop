@@ -1,0 +1,177 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebOS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         DESKTOP
+    ========================== -->
+    <main id="desktop">
+
+        <!-- Desktop Icons -->
+        <section id="desktopIcons">
+
+            <button class="desktop-icon" data-app="computer">
+                <span class="icon">🖥️</span>
+                <span>Computer</span>
+            </button>
+
+            <button class="desktop-icon" data-app="files">
+                <span class="icon">📁</span>
+                <span>Files</span>
+            </button>
+
+            <button class="desktop-icon" data-app="notepad">
+                <span class="icon">📝</span>
+                <span>Notepad</span>
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             APP WINDOWS
+        ========================== -->
+
+        <!-- Example Window -->
+        <div class="window hidden" id="computerWindow">
+
+            <div class="window-header">
+
+                <div class="window-title">
+                    🖥️ Computer
+                </div>
+
+                <div class="window-controls">
+                    <button class="window-button minimize">−</button>
+                    <button class="window-button maximize">□</button>
+                    <button class="window-button close">×</button>
+                </div>
+
+            </div>
+
+            <div class="window-content">
+                <h2>Welcome to WebOS</h2>
+                <p>This is the beginning of your browser-based operating system.</p>
+            </div>
+
+        </div>
+
+
+        <!-- Files Window -->
+        <div class="window hidden" id="filesWindow">
+
+            <div class="window-header">
+
+                <div class="window-title">
+                    📁 Files
+                </div>
+
+                <div class="window-controls">
+                    <button class="window-button minimize">−</button>
+                    <button class="window-button maximize">□</button>
+                    <button class="window-button close">×</button>
+                </div>
+
+            </div>
+
+            <div class="window-content">
+                <h2>File Manager</h2>
+                <p>Your files will appear here.</p>
+            </div>
+
+        </div>
+
+
+        <!-- Notepad Window -->
+        <div class="window hidden" id="notepadWindow">
+
+            <div class="window-header">
+
+                <div class="window-title">
+                    📝 Notepad
+                </div>
+
+                <div class="window-controls">
+                    <button class="window-button minimize">−</button>
+                    <button class="window-button maximize">□</button>
+                    <button class="window-button close">×</button>
+                </div>
+
+            </div>
+
+            <div class="window-content notepad-content">
+                <textarea id="notepadText" placeholder="Start typing..."></textarea>
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             START MENU
+        ========================== -->
+
+        <div id="startMenu" class="hidden">
+
+            <div class="start-header">
+                <h2>WebOS</h2>
+            </div>
+
+            <div class="start-apps">
+
+                <button data-app="computer">
+                    🖥️ Computer
+                </button>
+
+                <button data-app="files">
+                    📁 Files
+                </button>
+
+                <button data-app="notepad">
+                    📝 Notepad
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             TASKBAR
+        ========================== -->
+
+        <footer id="taskbar">
+
+            <button id="startButton">
+                ◉ Start
+            </button>
+
+            <div id="taskbarApps"></div>
+
+            <div id="systemTray">
+
+                <span id="networkStatus">🌐</span>
+
+                <span id="clock">
+                    00:00
+                </span>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
